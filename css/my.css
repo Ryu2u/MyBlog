@@ -1,0 +1,35 @@
+/*指针样式*/
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+    default;
+}
+
+/*链接小手样式*/
+a, img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+    default;
+}
+ /*页脚透明 */
+#footer, #footer:before {
+    background: transparent!important
+}
+/* 头图透明 */
+#page-header{
+    background-color: transparent!important;
+    /*background-image: url("https://ryu2u-1305537946.cos.ap-nanjing.myqcloud.com/E4D341AAE1A900B62387D9FB728D8F1F.png")!important;*/
+
+}
+/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
+#page-header.post-bg:before {
+    background-color: rgba(0,0,0,0)!important;
+}
+/*夜间模式伪类遮罩层透明*/
+[data-theme="dark"]
+
+[data-theme="dark"]
+#page-header::before{
+    background: transparent!important;
+}
+
+
+

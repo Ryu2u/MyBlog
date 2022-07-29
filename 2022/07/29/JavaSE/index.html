@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>JavaSE基础知识点 | Ryu2u的个人博客</title><meta name="author" content="ryu2u"><meta name="copyright" content="ryu2u"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="JAVA知识点12345public class Hello()&amp;#123;    public static void main(String[] args)&amp;#123;        System.println(&quot;Hello World&quot;);    &amp;#125;&amp;#125;  java语言有哪些特点封装、继承、多态、反射机制、集合、泛型 Java面向对象基础面向对象与面向">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaSE基础知识点">
+<meta property="og:url" content="http://example.com/2022/07/29/JavaSE/index.html">
+<meta property="og:site_name" content="Ryu2u的个人博客">
+<meta property="og:description" content="JAVA知识点12345public class Hello()&amp;#123;    public static void main(String[] args)&amp;#123;        System.println(&quot;Hello World&quot;);    &amp;#125;&amp;#125;  java语言有哪些特点封装、继承、多态、反射机制、集合、泛型 Java面向对象基础面向对象与面向">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-07-29T01:59:04.000Z">
+<meta property="article:modified_time" content="2022-07-29T02:01:52.847Z">
+<meta property="article:author" content="ryu2u">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/07/29/JavaSE/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JavaSE基础知识点',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-07-29 10:01:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script src="https://cyan-blog.oss-cn-shenzhen.aliyuncs.com/cdn/js/three.min.js"></script><link rel="stylesheet" href="/css/my.css" media="defer" onload="this.media='all'"><script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="wizard-scene"><div class="wizard-objects"><div class="wizard-square"></div><div class="wizard-circle"></div><div class="wizard-triangle"></div></div><div class="wizard"><div class="wizard-body"></div><div class="wizard-right-arm"><div class="wizard-right-hand"></div></div><div class="wizard-left-arm"><div class="wizard-left-hand"></div></div><div class="wizard-head"><div class="wizard-beard"></div><div class="wizard-face"><div class="wizard-adds"></div></div><div class="wizard-hat"><div class="wizard-hat-of-the-hat"></div><div class="wizard-four-point-star --first"></div><div class="wizard-four-point-star --second"></div><div class="wizard-four-point-star --third"></div></div></div></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://ryu2u-1305537946.cos.ap-nanjing.myqcloud.com/E4D341AAE1A900B62387D9FB728D8F1F.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouyex"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-fenlei1"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-biaoqian1"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-shijianzhou"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-shenghuo"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/messageboard/"><i class="fa-fw iconfont icon-liaotian-04"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友人帐</span></a></li><li><a class="site-page child" href="/share/"><i class="fa-fw iconfont icon-fenxiang"></i><span> 分享</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-xiangce"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-shuji"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/FilmAndTV/"><i class="fa-fw iconfont icon-yingshi1"></i><span> 影视</span></a></li><li><a class="site-page child" href="/daohang/"><i class="fa-fw iconfont icon-daohang"></i><span> 导航站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-gerenzhongxin"></i><span> 关于笔者</span></a></div></div></div></div><div class="canvas-container" id="canvas"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Ryu2u的个人博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouyex"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-fenlei1"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-biaoqian1"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-shijianzhou"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-shenghuo"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/messageboard/"><i class="fa-fw iconfont icon-liaotian-04"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友人帐</span></a></li><li><a class="site-page child" href="/share/"><i class="fa-fw iconfont icon-fenxiang"></i><span> 分享</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-xiangce"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-shuji"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/FilmAndTV/"><i class="fa-fw iconfont icon-yingshi1"></i><span> 影视</span></a></li><li><a class="site-page child" href="/daohang/"><i class="fa-fw iconfont icon-daohang"></i><span> 导航站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-gerenzhongxin"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JavaSE基础知识点</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-29T01:59:04.000Z" title="发表于 2022-07-29 09:59:04">2022-07-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-29T02:01:52.847Z" title="更新于 2022-07-29 10:01:52">2022-07-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java/">Java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JavaSE基础知识点"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="JAVA知识点"><a href="#JAVA知识点" class="headerlink" title="JAVA知识点"></a>JAVA知识点</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Hello</span>()&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.println(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="java语言有哪些特点"><a href="#java语言有哪些特点" class="headerlink" title="java语言有哪些特点"></a>java语言有哪些特点</h2><p>封装、继承、多态、反射机制、集合、泛型</p>
+<h3 id="Java面向对象基础"><a href="#Java面向对象基础" class="headerlink" title="Java面向对象基础"></a>Java面向对象基础</h3><h5 id="面向对象与面向过程的区别？"><a href="#面向对象与面向过程的区别？" class="headerlink" title="面向对象与面向过程的区别？"></a>面向对象与面向过程的区别？</h5><p>面向对象的特点：易维护，易扩展，易复用。</p>
+<p>面向对象实际上是面向抽象编程，解决问题时会先抽象出对象，再使用对象执行方法来解决。</p>
+<p>面向过程会把解决问题的过程拆分出一个个方法，使用方法来解决问题。</p>
+<h5 id="面向对象的三大特征"><a href="#面向对象的三大特征" class="headerlink" title="面向对象的三大特征"></a>面向对象的三大特征</h5><p>封装继承和多态</p>
+<p><strong>封装：</strong></p>
+<p>封装是指把一个对象的状态信息（也就是属性）隐藏在对象内部，不允许外部对象直接访问对象的内部信息。但是可以提供一些可以被外界访问的方法来操作属性。</p>
+<p><strong>继承：</strong></p>
+<p><strong>多态：</strong></p>
+<hr>
+<h4 id="为什么说-Java-语言“编译与解释并存”？"><a href="#为什么说-Java-语言“编译与解释并存”？" class="headerlink" title="为什么说 Java 语言“编译与解释并存”？"></a>为什么说 Java 语言“编译与解释并存”？</h4><p>首先我们要区分什么是编译型语言，什么是解释性语言</p>
+<p><strong>编译型语言：</strong></p>
+<p>编译型语言会通过<strong>编译器</strong>将源代码一次性翻译成<strong>可被该平台执行的机器码</strong>。一般情况下，编译语言的<strong>执行速度比较快，开发效率比较低</strong>。常见的编译性语言有 C、C++、Go、Rust 等等。</p>
+<p><strong>解释型语言：</strong></p>
+<p>解释型语言会通过<strong>解释器</strong>一句一句的将代码<strong>解释（interpret）为机器代码</strong>后再执行。解释型语言<strong>开发效率比较快，执行速度比较慢</strong>。常见的解释性语言有 Python、JavaScript、PHP 等等。</p>
+<p>因为 Java 语言既具有编译型语言的特征，也具有解释型语言的特征。因为 Java 程序要经过先编译，后解释两个步骤，由 Java 编写的程序需要先经过编译步骤，生成字节码（<code>.class</code> 文件），这种字节码必须由 Java 解释器来解释执行。</p>
+<h4 id="标识符与关键字的区别"><a href="#标识符与关键字的区别" class="headerlink" title="标识符与关键字的区别"></a>标识符与关键字的区别</h4><p><strong>我们常用的方法、类、变量、程序的名字就是标识符。</strong></p>
+<p><strong>可以认为关键字是在java中赋予特殊意义的标识符。</strong></p>
+<blockquote>
+<p>虽然 <code>true</code>, <code>false</code>, 和 <code>null</code> 看起来像关键字但实际上他们是字面值，同时你也不可以作为标识符来使用。</p>
+</blockquote>
+<h4 id="字符型常量和字符串常量的区别"><a href="#字符型常量和字符串常量的区别" class="headerlink" title="字符型常量和字符串常量的区别?"></a>字符型常量和字符串常量的区别?</h4><ol>
+<li><strong>形式</strong> : 字符常量是单引号引起的一个字符，字符串常量是双引号引起的 0 个或若干个字符。</li>
+<li><strong>含义</strong> : 字符常量相当于一个整型值( ASCII 值),可以参加表达式运算; 字符串常量代表一个地址值(该字符串在内存中存放位置)。</li>
+<li><strong>占内存大小</strong> ： 字符常量只占 2 个字节; 字符串常量占若干个字节。</li>
+</ol>
+<blockquote>
+<p>char 在Java中占据两个字符。</p>
+</blockquote>
+<h2 id="HashMap集合遍历的七种方式"><a href="#HashMap集合遍历的七种方式" class="headerlink" title="HashMap集合遍历的七种方式"></a>HashMap集合遍历的七种方式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * HashMap集合遍历的七种方式</span></span><br><span class="line"><span class="comment"> *  总结:</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Ryuzu</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/11/21 19:19</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HashMapTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        Map&lt;Integer,String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>();</span><br><span class="line">        map.put(<span class="number">1</span>, <span class="string">&quot;java&quot;</span>);</span><br><span class="line">        map.put(<span class="number">2</span>, <span class="string">&quot;javaSE&quot;</span>);</span><br><span class="line">        map.put(<span class="number">3</span>, <span class="string">&quot;javaEE&quot;</span>);</span><br><span class="line">        map.put(<span class="number">4</span>, <span class="string">&quot;Spring&quot;</span>);</span><br><span class="line">        map.put(<span class="number">5</span>, <span class="string">&quot;SpringMVC&quot;</span>);</span><br><span class="line">        map.put(<span class="number">6</span>, <span class="string">&quot;MyBatis&quot;</span>);</span><br><span class="line"></span><br><span class="line">        way1(map);</span><br><span class="line">        way2(map);</span><br><span class="line">        way3(map);</span><br><span class="line">        way4(map);</span><br><span class="line">        way5(map);</span><br><span class="line">        way6(map);</span><br><span class="line">        way7(map);</span><br><span class="line"></span><br><span class="line">        System.out.println(Integer.valueOf(<span class="string">&#x27;\t&#x27;</span>));<span class="comment">//9</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    迭代器EntrySet</span></span><br><span class="line"><span class="comment">    遍历方式</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">way1</span><span class="params">(Map&lt;Integer,String &gt; map)</span> &#123;</span><br><span class="line">        Iterator&lt;Map.Entry&lt;Integer,String&gt;&gt; it = map.entrySet().iterator();</span><br><span class="line">        <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">            Map.Entry&lt;Integer,String&gt; node = it.next();</span><br><span class="line">            System.out.println(node.getKey() + <span class="string">&quot;\t&quot;</span> + node.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    ForEach EntrySet</span></span><br><span class="line"><span class="comment">    遍历</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">way2</span><span class="params">(Map&lt;Integer,String&gt; map)</span>&#123;</span><br><span class="line">        Set&lt;Map.Entry&lt;Integer,String&gt;&gt; set = map.entrySet();</span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;Integer, String&gt; entry : set) &#123;</span><br><span class="line">            System.out.println(entry.getKey() + <span class="string">&quot;\t&quot;</span> + entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    迭代器 KeySet</span></span><br><span class="line"><span class="comment">    遍历</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">way3</span><span class="params">(Map&lt;Integer, String&gt; map)</span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = map.keySet();</span><br><span class="line">        Iterator&lt;Integer&gt; it = set.iterator();</span><br><span class="line">        <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">key</span> <span class="operator">=</span> it.next();</span><br><span class="line">            System.out.println(key + <span class="string">&quot;\t&quot;</span> + map.get(key));</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">       ForEach KeySet</span></span><br><span class="line"><span class="comment">       遍历方式</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">way4</span><span class="params">(Map&lt;Integer, String&gt; map)</span>&#123;</span><br><span class="line">            Set&lt;Integer&gt; set = map.keySet();</span><br><span class="line">            <span class="keyword">for</span> (Integer integer : set) &#123;</span><br><span class="line">                System.out.println(integer + <span class="string">&quot;\t&quot;</span> + map.get(integer));</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    Lambda函数</span></span><br><span class="line"><span class="comment">    遍历</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">way5</span><span class="params">(Map&lt;Integer, String&gt; map)</span> &#123;</span><br><span class="line">            map.forEach((key,value)-&gt;</span><br><span class="line">                System.out.println(key + <span class="string">&quot;\t&quot;</span> + value)</span><br><span class="line">            );</span><br><span class="line"></span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        Stream API 单线程</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">way6</span><span class="params">(Map&lt;Integer, String&gt; map)</span> &#123;</span><br><span class="line">        map.entrySet().stream().</span><br><span class="line">                forEach(node -&gt; System.out.println(node.getKey() + <span class="string">&quot;\t&quot;</span> + node.getValue()));</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        Stream 多线程</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">way7</span><span class="params">(Map&lt;Integer, String&gt; map)</span> &#123;</span><br><span class="line">        map.entrySet().parallelStream().</span><br><span class="line">                forEach(node -&gt; System.out.println(node.getKey() + <span class="string">&quot;\t&quot;</span> + node.getValue()));</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="new-Integer-123-与Integer-valueOf-123-的区别在于"><a href="#new-Integer-123-与Integer-valueOf-123-的区别在于" class="headerlink" title="new Integer(123)与Integer.valueOf(123)的区别在于?"></a>new Integer(123)与Integer.valueOf(123)的区别在于?</h2><ul>
+<li>new Integer(123) 每次都会新建一个对象;</li>
+<li>Integer.valueOf(123) 会使用缓存池对象, 多次调用回去得同一个对象的引用</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">x</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Integer</span>(<span class="number">123</span>);</span><br><span class="line"><span class="type">Integer</span> <span class="variable">y</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Integer</span>(<span class="number">123</span>);</span><br><span class="line">System.out.println(x == y); <span class="comment">// false</span></span><br><span class="line"><span class="type">Integer</span> <span class="variable">z</span> <span class="operator">=</span> Integer.valueOf(<span class="number">123</span>);</span><br><span class="line"><span class="type">Integer</span> <span class="variable">k</span> <span class="operator">=</span> Integer.valueOf(<span class="number">123</span>);</span><br><span class="line">System.out.println(z == k); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><h3 id="equals-与hashCode-方法的关系"><a href="#equals-与hashCode-方法的关系" class="headerlink" title="equals()与hashCode()方法的关系"></a>equals()与hashCode()方法的关系</h3><p>java对于equals()方法和hashCode()方法是这样规定的:</p>
+<ul>
+<li>同一对象多次调用hashCode()方法,总是返回相同的整型值</li>
+<li>如果a.equals(b),则一定有a.hashCode()一定等于b.hashCode().</li>
+<li>如果!a.equals(b),则a.hashCode() 不一定等于b.hashCode(),此时如果a.hashCode()总是不等于b.hashCode(),会提高hashtables的性能.</li>
+<li>a.hashCode() &#x3D;&#x3D; b.hashCode()则a.equals(b)可真可假.</li>
+<li>a.hashCode()! &#x3D; b.hashCode()则a.equals(b)为假.</li>
+</ul>
+<h2 id="Java-lang-String类"><a href="#Java-lang-String类" class="headerlink" title="Java.lang.String类"></a>Java.lang.String类</h2><p>​	String类被<code>final</code>修饰了, 因此他不能被继承 (Integer等包装类也不能被继承)</p>
+<p>​	在java 8 中,String类使用<code>char</code>数组存储数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">String</span> <span class="keyword">implements</span> <span class="title class_">java</span>.io.Serializable,Comparable&lt;String&gt;, CharSequence &#123;</span><br><span class="line">	<span class="comment">/** The value is used for character storage. */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> <span class="type">char</span> value[];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	在java 9 之后, String类的实现该用了byte数组了存储字符串, 并且使用了<code>coder</code>来标识使用了哪个编码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">String</span> <span class="keyword">implements</span> <span class="title class_">java</span>.io.Serializable,Comparable&lt;String&gt;, CharSequence &#123;</span><br><span class="line">	<span class="comment">/** The value is used for character storage. */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> <span class="type">byte</span>[] value;</span><br><span class="line">	<span class="comment">/** The identifier of the encoding used to encode the bytes in &#123;<span class="doctag">@code</span></span></span><br><span class="line"><span class="comment">value&#125;. */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> <span class="type">byte</span> coder;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	value数组被final修饰, 这意味着value数组一旦初始化后就不可在引用其他数组, 并且String内部没有改变value数组的方法, 因此可以保证String不可变.</p>
+<h3 id="String类型不可变的好处"><a href="#String类型不可变的好处" class="headerlink" title="String类型不可变的好处"></a>String类型不可变的好处</h3><ol>
+<li>可以缓存hash值</li>
+</ol>
+<p>​	因为String的hash值经常被使用, 例如String用做HashMap的key, 不可变的特性也可以使得每次计算的hash值不可变, 因此只需要进行一次计算.</p>
+<ol start="2">
+<li><p>String Pool 的需要</p>
+<p>如果一个String对象已经被创建过了, 那么就会从String Pool(String的常量池)中取得引用 , 只有String是不可变的, 才可能使用String Pool</p>
+</li>
+<li><p>安全性</p>
+<p>String经常作为参数, String不可变性可以保证参数不可变, 例如在作为网络连接参数的情况下如果String 是可变的, 那么在网络连接过程中, String被改变, 改变String的哪一方以为现在连接的是其他主机, 而实际情况却不一定是.</p>
+</li>
+<li><p>线程安全</p>
+<p>String不可变天生具有线程安全, 可以在多个线程中安全的使用.</p>
+</li>
+</ol>
+<h3 id="String-StringBuffer-和-StringBuilder"><a href="#String-StringBuffer-和-StringBuilder" class="headerlink" title="String, StringBuffer 和 StringBuilder"></a>String, StringBuffer 和 StringBuilder</h3><ol>
+<li>可变性<ul>
+<li>String不可变</li>
+<li>StringBuffer 和 StringBuilder 可变</li>
+</ul>
+</li>
+<li>线程安全<ul>
+<li>String不可变, 因此是线程安全的</li>
+<li>StringBuffer  是线程安全的, 内部使用了Synchronized锁进行同步</li>
+<li>StringBuilder 不是线程安全的</li>
+</ul>
+</li>
+</ol>
+<h3 id="String-Pool-String-常量池"><a href="#String-Pool-String-常量池" class="headerlink" title="String Pool (String 常量池)"></a>String Pool (String 常量池)</h3><p>String Pool 保存在所有字符串字面量, 这些字面量在编译时期就确定,</p>
+<p>不仅如此, 还可使用String的intern() 方法在运行过程中将字符串添加到String Pool中</p>
+<h4 id="intern"><a href="#intern" class="headerlink" title="intern()"></a>intern()</h4><p>当一个字符串调用intern(0方法是, 如果String Pool 中已经存在了一个字符串和该字符串值相等(使用equals()方法) , name就很惨放回StringPool 中字符串的引用; 否则, 就会在String Pool 中添加一个新的字符串, 并返回这个字符串的引用.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">System.out.println(s1 == s2); <span class="comment">// false</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> s1.intern();</span><br><span class="line"><span class="type">String</span> <span class="variable">s4</span> <span class="operator">=</span> s2.intern();</span><br><span class="line">System.out.println(s3 == s4); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用String将数字位不足的地方补零"><a href="#使用String将数字位不足的地方补零" class="headerlink" title="使用String将数字位不足的地方补零"></a>使用String将数字位不足的地方补零</h3><h4 id="自定义封装"><a href="#自定义封装" class="headerlink" title="自定义封装"></a>自定义封装</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 数字不足位数前后补0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> num 参与补零的数字</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> len 最终位数长度</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> prev 前或后，true前，false后</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">zeroFormat</span><span class="params">(Integer num, <span class="type">int</span> len, <span class="type">boolean</span> prev)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">l</span> <span class="operator">=</span> num.toString().length();</span><br><span class="line">    <span class="type">StringBuffer</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>();</span><br><span class="line">    <span class="keyword">if</span>(!prev)</span><br><span class="line">        sb.append(num);<span class="comment">//后补</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;len-l;i++)</span><br><span class="line">        sb.append(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(prev)</span><br><span class="line">        sb.append(num);<span class="comment">//前补</span></span><br><span class="line">    <span class="keyword">return</span> sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用自带的String-Format方法"><a href="#使用自带的String-Format方法" class="headerlink" title="使用自带的String.Format方法"></a>使用自带的String.Format方法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//前补零</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> String.format(<span class="string">&quot;%05d&quot;</span>, <span class="number">12</span>);</span><br><span class="line">System.out.println(str1);<span class="comment">//00012</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">//后补零</span></span><br><span class="line"><span class="type">String</span> <span class="variable">num</span> <span class="operator">=</span> <span class="string">&quot;12&quot;</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> num + String.format(<span class="string">&quot;%0&quot;</span>+(len - num.length())+<span class="string">&quot;d&quot;</span>, <span class="number">0</span>);</span><br><span class="line">System.out.println(str2);<span class="comment">//12000</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="使用Number、DecimalFormat"><a href="#使用Number、DecimalFormat" class="headerlink" title="使用Number、DecimalFormat"></a>使用Number、DecimalFormat</h4><p>支持小数、负数、货币、百分比等等各种操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//前补零</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DecimalFormat</span>(<span class="string">&quot;00000&quot;</span>).format(<span class="number">12</span>);</span><br><span class="line">System.out.println(str1);<span class="comment">//00012</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DecimalFormat</span>(<span class="string">&quot;00000.000&quot;</span>).format(<span class="number">12.12</span>);</span><br><span class="line">System.out.println(str2);<span class="comment">//00012.120</span></span><br><span class="line"> </span><br><span class="line"><span class="type">NumberFormat</span> <span class="variable">formatter</span> <span class="operator">=</span> NumberFormat.getNumberInstance();</span><br><span class="line">formatter.setGroupingUsed(<span class="literal">false</span>);<span class="comment">//不分组</span></span><br><span class="line">formatter.setMinimumIntegerDigits(<span class="number">5</span>);<span class="comment">//整数部分中所允许的最小数字位数</span></span><br><span class="line"><span class="comment">//formatter.setMinimumFractionDigits(3);//小数部分中所允许的最小数字位数</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str3</span> <span class="operator">=</span> formatter.format(<span class="number">12</span>);</span><br><span class="line">System.out.println(str3);<span class="comment">//00012</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//后面补零</span></span><br><span class="line"><span class="type">Integer</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">12</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">l</span> <span class="operator">=</span> len - num.toString().length();</span><br><span class="line"> </span><br><span class="line"><span class="type">DecimalFormat</span> <span class="variable">df</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DecimalFormat</span>();</span><br><span class="line">df.setGroupingUsed(<span class="literal">false</span>);</span><br><span class="line">df.setMinimumIntegerDigits(len);</span><br><span class="line"><span class="keyword">if</span>(l&gt;<span class="number">0</span>)</span><br><span class="line">    df.setMultiplier((<span class="type">int</span>)Math.pow(<span class="number">10</span>,l));</span><br><span class="line">System.out.println(df.format(num));<span class="comment">//12000</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<h2 id="Switch-语句"><a href="#Switch-语句" class="headerlink" title="Switch 语句"></a>Switch 语句</h2><h3 id="switch-支持的数据类型"><a href="#switch-支持的数据类型" class="headerlink" title="switch 支持的数据类型"></a>switch 支持的数据类型</h3><ul>
+<li>Java 7 中加入了对String类型的支持。所以支持的有：char、byte、short、int 和 Character、Byte、Short、Integer 和 String</li>
+</ul>
+<hr>
+<h2 id="接口与抽象类的区别"><a href="#接口与抽象类的区别" class="headerlink" title="接口与抽象类的区别"></a>接口与抽象类的区别</h2><h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>接口是一个特殊的类, 使用的是 interface 修饰的类 实现接口需要使用implements</p>
+<p>接口的作用: 制定规则</p>
+<p>​					  降低耦合</p>
+<ul>
+<li><strong>接口中的所有方法都是抽象方法, 没有方法体, 如果想要有具体的实现, 需要使用default修饰词</strong></li>
+<li><strong>接口中的属性默认都是常量</strong></li>
+<li><strong>接口中的方法不能使用private修饰, 但java 9 之后可以使用了</strong></li>
+<li><strong>接口与接口之间可以多继承, 但不能互相实现</strong></li>
+<li><strong>接口之中没有构造方法，这就是为什么接口不能被实例化</strong></li>
+<li><strong>java8之前接口是不能有静态方法的，java8之后可以，但是只能由接口类自己调用。</strong></li>
+</ul>
+<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>抽象类使用abstract 修饰的类 继承抽象类使用的是extends</p>
+<p>抽象类的作用是: <strong>降低接口与接口实现类之间实现复杂度的问题</strong></p>
+<ul>
+<li><strong>抽象类中的方法可以是抽象方法,也可以有具体的实现</strong></li>
+<li><strong>抽象类继承一个接口时, 可以不需要实现接口中的所有方法</strong></li>
+<li><strong>抽象类声明的方法必须由子类进行重写</strong></li>
+<li><strong>抽象类中是有构造方法的(但是抽象类不能实例化)</strong></li>
+<li><strong>抽象类可以有静态方法</strong></li>
+</ul>
+<h3 id="使用选择"><a href="#使用选择" class="headerlink" title="使用选择"></a>使用选择</h3><h4 id="使用接口"><a href="#使用接口" class="headerlink" title="使用接口"></a>使用接口</h4><p>​	需要让不相关的类都实现一个方法</p>
+<p>​	需要使用多继承</p>
+<h4 id="使用抽象类"><a href="#使用抽象类" class="headerlink" title="使用抽象类"></a>使用抽象类</h4><p>​	需要在几个相关的类中共享代码。</p>
+<p>​	需要能控制继承来的成员的访问权限，而不不是都为 public。</p>
+<p>​	需要继承非静态和非常量字段。</p>
+<hr>
+<h2 id="重写与重载的区别"><a href="#重写与重载的区别" class="headerlink" title="重写与重载的区别"></a>重写与重载的区别</h2><h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>重载是指: 一个类中可以有多个方法拥有同样的方法名, 具有不同的参数列表</p>
+<p>重载的作用是使用相同的对象, 调用相同的方法, 使用不同的参数列表, 实现不同的功能</p>
+<p>被final修饰的方法是可以被重载的。</p>
+<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是指: 子类继承父类中, 并对父类中的方法进行重新定义</p>
+<ul>
+<li><p>具有final 或者 private修饰的方法不能被重写</p>
+</li>
+<li><p>重写的方法不能抛出比父类方法更多的异常</p>
+</li>
+<li><p>重写的方法可以扩大他的访问权限, 但可以缩小他的访问权限</p>
+</li>
+<li><p>重写方法的返回值可以缩小, 但不能扩大</p>
+</li>
+</ul>
+<hr>
+<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>反射的优点:</p>
+<pre><code>    - 可扩展性:  应用程序可以利用全限定名创建可扩展对象的实例, 来使用来自外部的用户的自定义类
+    - 类浏览器和可视化开发环境: 一个类浏览器需要可以枚举类的成员. 可视化开发环境(如IDE) 可以利用反射中可用的类型信息中受益, 以帮助程序员编写正确的代码.
+</code></pre>
+<p>反射的缺点:</p>
+<ul>
+<li>性能开销</li>
+<li>安全限制</li>
+<li>内部暴露</li>
+</ul>
+<p>java中获取Class类的三种方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java中获取反射的三种方式</span></span><br><span class="line">        LOGGER.info(<span class="string">&quot;根据类名：&quot;</span>+User.class);</span><br><span class="line">        LOGGER.info(<span class="string">&quot;根据对象：&quot;</span> + <span class="keyword">new</span> <span class="title class_">User</span>().getClass());</span><br><span class="line">        LOGGER.info(<span class="string">&quot;根据全限定类名：&quot;</span> + 						    Class.forName(<span class="string">&quot;org.example.entity.User&quot;</span>));</span><br><span class="line">        <span class="comment">// 常使用的方法</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">userClass</span> <span class="operator">=</span> Class.forName(<span class="string">&quot;org.example.entity.User&quot;</span>);</span><br><span class="line">        LOGGER.info(<span class="string">&quot;获取全限定类名：&quot;</span> + userClass.getName());</span><br><span class="line">        LOGGER.info(<span class="string">&quot;获取类名：&quot;</span> + userClass.getSimpleName());</span><br><span class="line">        LOGGER.info(<span class="string">&quot;获取实例对象：&quot;</span> + userClass.newInstance());</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p><img src="https://ryu2u-1305537946.cos.ap-nanjing.myqcloud.com/images/image-20220308145041764.png" alt="image-20220308145041764"></p>
+<h2 id="this（）与super（）在构造方法中的作用"><a href="#this（）与super（）在构造方法中的作用" class="headerlink" title="this（）与super（）在构造方法中的作用"></a>this（）与super（）在构造方法中的作用</h2><ul>
+<li>调用super（）必须在构造方法的第一行</li>
+<li>super（）在子类中调用父类构造，this（）在同一类中调用其他构造都必须放在同一行。</li>
+<li>尽管可以使用this（）调用其他构造，但不能调用两个。</li>
+<li>this和super不能出现在同一个构造器中。</li>
+<li>this和super都指的是对象，不能在static中使用。</li>
+<li>本质this是一个指针，super是关键字。</li>
+</ul>
+<hr>
+<h2 id="java位移运算符"><a href="#java位移运算符" class="headerlink" title="java位移运算符"></a>java位移运算符</h2><p>java中有三种位移运算符</p>
+<ul>
+<li>&lt;&lt; 左位移运算符,<code>x&lt;&lt;1</code>将x左移一位，相当于将x乘2，低位补0。</li>
+<li>&gt;&gt; 右位移运算符,<code>x&gt;&gt;1</code>将x右移一位，相当于将x除2，高位补1。</li>
+<li>&gt;&gt;&gt; 无符号右移，忽略符号位，空位都以0补齐。</li>
+</ul>
+<hr>
+<h2 id="java中的泛型"><a href="#java中的泛型" class="headerlink" title="java中的泛型"></a>java中的泛型</h2><p>java中的泛型可以在类中声明，也可以使用在方法上。</p>
+<p>泛型中的类在使用时指定，不需要强制转换。</p>
+<p>这是因为java中的泛型是伪泛型：</p>
+<p>因为java中使用了泛型类型擦除，java1.5引入了泛型这个概念，为了兼容之前的版本，java 的泛型使用了伪泛型的策略，即java语言在语法上支持泛型，但在编译时会进行泛型类型擦除，编译器会将类型自动转换为指定的类型，就像没有泛型一样。</p>
+<h3 id="为什么要使用泛型？"><a href="#为什么要使用泛型？" class="headerlink" title="为什么要使用泛型？"></a>为什么要使用泛型？</h3><p>使用泛型可以将多个使用不同类型的方法复用为一个代码。</p>
+<hr>
+<h2 id="java-的注解"><a href="#java-的注解" class="headerlink" title="java 的注解"></a>java 的注解</h2><p>java 自带的标准注解有：@Override、@Deprecated和@SuppressWarnings，分别用来表示：重写某个方法、声明某个方法过时、声明需要忽略的警告。</p>
+<p><strong>元注解：</strong>值用来注解注解类的注解</p>
+<ul>
+<li>@Retention 用于标明注解被保留的阶段</li>
+<li>@Target 用于标明注解使用的范围</li>
+<li>@Inherited 用于标明注解可继承</li>
+<li>@Documented 用于标明是否生成javadoc文档</li>
+</ul>
+<p>在java中可以自定义注解的使用</p>
+<h2 id="Lambda-表达式"><a href="#Lambda-表达式" class="headerlink" title="Lambda 表达式"></a>Lambda 表达式</h2><p>lambda表达式时java8中新增的一个特性，它可以对某些匿名内部类的写法进行简化。他是函数式编程思想的一个重要体现，<strong>让我们不再关注时什么对象，而是更关注于我们对数据进行了什么操作。</strong></p>
+<p>Lambda表达式的好处：</p>
+<ul>
+<li>代码可读性高</li>
+<li>大数量下处理集合效率高</li>
+<li>代码简洁</li>
+<li>易于并发编程</li>
+<li>接近自然语言，易于理解</li>
+</ul>
+<h3 id="函数式编程思想"><a href="#函数式编程思想" class="headerlink" title="函数式编程思想"></a>函数式编程思想</h3><p>面向对象思想需要关注使用什么对象完成什么事情，而函数式编程思想就类似于我们数学中的函数，它主要关注的是对数据进行了什么操作。</p>
+<h3 id="Lambda-表达式的使用"><a href="#Lambda-表达式的使用" class="headerlink" title="Lambda 表达式的使用"></a>Lambda 表达式的使用</h3><p>使用Lambda表达式实现接口时，只能实现只有一个方法的接口。</p>
+<h3 id="Stream流"><a href="#Stream流" class="headerlink" title="Stream流"></a>Stream流</h3><p>java8的Stream流使用的是函数式编程模式,如同他的名字一样，他可以被用来对集合或数组进行链状流式的操作，可以更方便的让我们对集合或数组操作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">authors.stream()</span><br><span class="line">                <span class="comment">//去重</span></span><br><span class="line">                .distinct()</span><br><span class="line">                <span class="comment">//过滤,条件:年龄小于18</span></span><br><span class="line">                .filter(author -&gt; author.getAge() &lt; <span class="number">18</span>)</span><br><span class="line">                <span class="comment">//遍历打印</span></span><br><span class="line">                .forEach(author -&gt; System.out.println(author.getName()));</span><br></pre></td></tr></table></figure>
+
+<h4 id="创建流"><a href="#创建流" class="headerlink" title="创建流"></a>创建流</h4><p>单列集合：<code>集合对象.stream()</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;Author&gt; stream = authors.stream();</span><br></pre></td></tr></table></figure>
+
+<p>数组：<code>Arrays.stream(数组)</code>或者使用<code>stream.of</code>来创建</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;Integer&gt; stream1 = Arrays.stream(arr);</span><br><span class="line">Stream&lt;Integer&gt; stream2 = Stream.of(arr);</span><br></pre></td></tr></table></figure>
+
+<p>双列集合：转换成单列集合后zai创建</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;Map.Entry&lt;String,Integer&gt;&gt; stream = map.entrySet().stream();</span><br></pre></td></tr></table></figure>
+
+<h4 id="中间操作"><a href="#中间操作" class="headerlink" title="中间操作"></a>中间操作</h4><p>filter：用于过滤</p>
+<p>distinct：用于去重</p>
+<p>sorted：用于排序，无参方法需要实现comparable接口，有参方法需要实现接口comparator中的方法。</p>
+<p>limit：用于设置流的最大长度，可以截取集合中前几个元素</p>
+<p>skip：跳过集合中的前nge</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">ryu2u</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/07/29/JavaSE/">http://example.com/2022/07/29/JavaSE/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Ryu2u的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/07/29/Angular/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Angular</div></div></a></div><div class="next-post pull-right"><a href="/2022/07/28/SecondPost/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">SecondPost</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://ryu2u-1305537946.cos.ap-nanjing.myqcloud.com/E4D341AAE1A900B62387D9FB728D8F1F.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">ryu2u</div><div class="author-info__description">Ryu2u的博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Ryu2u" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://mail.qq.com/cgi-bin/frame_html?sid=Wf3LZHw5OJh7ZEsp&amp;r=b90401d80bb70300ceaf6f89ba952d1a&amp;lang=zh" target="_blank" title="ryu2u@qq.com"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/;" target="_blank" title="799021220"><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">JAVA知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E8%AF%AD%E8%A8%80%E6%9C%89%E5%93%AA%E4%BA%9B%E7%89%B9%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">java语言有哪些特点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80"><span class="toc-number">1.1.1.</span> <span class="toc-text">Java面向对象基础</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.1.1.0.1.</span> <span class="toc-text">面向对象与面向过程的区别？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81"><span class="toc-number">1.1.1.0.2.</span> <span class="toc-text">面向对象的三大特征</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-Java-%E8%AF%AD%E8%A8%80%E2%80%9C%E7%BC%96%E8%AF%91%E4%B8%8E%E8%A7%A3%E9%87%8A%E5%B9%B6%E5%AD%98%E2%80%9D%EF%BC%9F"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">为什么说 Java 语言“编译与解释并存”？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6%E4%B8%8E%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">标识符与关键字的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%B8%B8%E9%87%8F%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">字符型常量和字符串常量的区别?</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashMap%E9%9B%86%E5%90%88%E9%81%8D%E5%8E%86%E7%9A%84%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">HashMap集合遍历的七种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new-Integer-123-%E4%B8%8EInteger-valueOf-123-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%A8%E4%BA%8E"><span class="toc-number">1.3.</span> <span class="toc-text">new Integer(123)与Integer.valueOf(123)的区别在于?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E7%B1%BB"><span class="toc-number">1.4.</span> <span class="toc-text">Object类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#equals-%E4%B8%8EhashCode-%E6%96%B9%E6%B3%95%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.4.1.</span> <span class="toc-text">equals()与hashCode()方法的关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-lang-String%E7%B1%BB"><span class="toc-number">1.5.</span> <span class="toc-text">Java.lang.String类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#String%E7%B1%BB%E5%9E%8B%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">1.5.1.</span> <span class="toc-text">String类型不可变的好处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-StringBuffer-%E5%92%8C-StringBuilder"><span class="toc-number">1.5.2.</span> <span class="toc-text">String, StringBuffer 和 StringBuilder</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-Pool-String-%E5%B8%B8%E9%87%8F%E6%B1%A0"><span class="toc-number">1.5.3.</span> <span class="toc-text">String Pool (String 常量池)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#intern"><span class="toc-number">1.5.3.1.</span> <span class="toc-text">intern()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8String%E5%B0%86%E6%95%B0%E5%AD%97%E4%BD%8D%E4%B8%8D%E8%B6%B3%E7%9A%84%E5%9C%B0%E6%96%B9%E8%A1%A5%E9%9B%B6"><span class="toc-number">1.5.4.</span> <span class="toc-text">使用String将数字位不足的地方补零</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85"><span class="toc-number">1.5.4.1.</span> <span class="toc-text">自定义封装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6%E7%9A%84String-Format%E6%96%B9%E6%B3%95"><span class="toc-number">1.5.4.2.</span> <span class="toc-text">使用自带的String.Format方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Number%E3%80%81DecimalFormat"><span class="toc-number">1.5.4.3.</span> <span class="toc-text">使用Number、DecimalFormat</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Switch-%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.6.</span> <span class="toc-text">Switch 语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#switch-%E6%94%AF%E6%8C%81%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.1.</span> <span class="toc-text">switch 支持的数据类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.7.</span> <span class="toc-text">接口与抽象类的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.7.1.</span> <span class="toc-text">接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-number">1.7.2.</span> <span class="toc-text">抽象类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E9%80%89%E6%8B%A9"><span class="toc-number">1.7.3.</span> <span class="toc-text">使用选择</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.7.3.1.</span> <span class="toc-text">使用接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-number">1.7.3.2.</span> <span class="toc-text">使用抽象类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.8.</span> <span class="toc-text">重写与重载的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E8%BD%BD"><span class="toc-number">1.8.1.</span> <span class="toc-text">重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%86%99"><span class="toc-number">1.8.2.</span> <span class="toc-text">重写</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84"><span class="toc-number">1.9.</span> <span class="toc-text">反射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-number">1.10.</span> <span class="toc-text">异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this%EF%BC%88%EF%BC%89%E4%B8%8Esuper%EF%BC%88%EF%BC%89%E5%9C%A8%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">1.11.</span> <span class="toc-text">this（）与super（）在构造方法中的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E4%BD%8D%E7%A7%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.12.</span> <span class="toc-text">java位移运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B"><span class="toc-number">1.13.</span> <span class="toc-text">java中的泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E6%B3%9B%E5%9E%8B%EF%BC%9F"><span class="toc-number">1.13.1.</span> <span class="toc-text">为什么要使用泛型？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java-%E7%9A%84%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.14.</span> <span class="toc-text">java 的注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.15.</span> <span class="toc-text">Lambda 表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3"><span class="toc-number">1.15.1.</span> <span class="toc-text">函数式编程思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.15.2.</span> <span class="toc-text">Lambda 表达式的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stream%E6%B5%81"><span class="toc-number">1.15.3.</span> <span class="toc-text">Stream流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%B5%81"><span class="toc-number">1.15.3.1.</span> <span class="toc-text">创建流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E9%97%B4%E6%93%8D%E4%BD%9C"><span class="toc-number">1.15.3.2.</span> <span class="toc-text">中间操作</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/29/Angular/" title="Angular"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Angular"/></a><div class="content"><a class="title" href="/2022/07/29/Angular/" title="Angular">Angular</a><time datetime="2022-07-29T03:21:42.000Z" title="发表于 2022-07-29 11:21:42">2022-07-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/29/JavaSE/" title="JavaSE基础知识点"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaSE基础知识点"/></a><div class="content"><a class="title" href="/2022/07/29/JavaSE/" title="JavaSE基础知识点">JavaSE基础知识点</a><time datetime="2022-07-29T01:59:04.000Z" title="发表于 2022-07-29 09:59:04">2022-07-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/28/SecondPost/" title="SecondPost"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SecondPost"/></a><div class="content"><a class="title" href="/2022/07/28/SecondPost/" title="SecondPost">SecondPost</a><time datetime="2022-07-28T09:46:07.000Z" title="发表于 2022-07-28 17:46:07">2022-07-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/28/MarkDown%E8%AF%AD%E6%B3%95/" title="MarkDown语法"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MarkDown语法"/></a><div class="content"><a class="title" href="/2022/07/28/MarkDown%E8%AF%AD%E6%B3%95/" title="MarkDown语法">MarkDown语法</a><time datetime="2022-07-27T16:00:00.000Z" title="发表于 2022-07-28 00:00:00">2022-07-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/27/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/07/27/hello-world/" title="Hello World">Hello World</a><time datetime="2022-07-27T09:46:07.000Z" title="发表于 2022-07-27 17:46:07">2022-07-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By ryu2u</div><!--if theme.footer.copyright--><!--  .framework-info--><!--    span= _p('footer.framework') + ' '--><!--    a(href='https://hexo.io')= 'Hexo'--><!--    span.footer-separator |--><!--    span= _p('footer.theme') + ' '--><!--    a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'--></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 5000);</script><div class="js-pjax"></div><script async data-pjax src="/js/sky.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://assets.akilar.top/image/cover1.webp);"> <a class="categoryBar-list-link" href="categories/Java/">Java</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Java</span></li><li class="categoryBar-list-item" style="background:url(https://assets.akilar.top/image/cover2.webp);"> <a class="categoryBar-list-link" href="categories/angular/">angular</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Angular</span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><!-- hexo injector body_end end --></body></html>
